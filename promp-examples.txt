@@ -1,0 +1,7 @@
+Run the following command on terminal to use ollama with the model you want, in this case deepseek-r1. It starts up the server
+
+ollama run deepseek-r1:1.5b
+
+then on another terminal tab we can send a request
+
+curl -X POST http://localhost:11434/api/generate \ -H "Content-Type: application/json" \ -d '{ "model": "deepseek-r1:1.5b", "prompt": "Explain the theory of relativity in simple terms.", "stream": false }'
